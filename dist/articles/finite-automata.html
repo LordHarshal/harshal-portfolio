@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications of Finite Automata - Harshal Sahani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0A192F; color: #E6F1FF; }
+        .article-content h2 { color: #64FFDA; font-size: 1.75rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+        .article-content p { color: #8892B0; line-height: 1.8; margin-bottom: 1rem; }
+        .article-content ul, .article-content ol { color: #8892B0; margin-left: 2rem; margin-bottom: 1rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+        .article-content strong { color: #64FFDA; }
+    </style>
+</head>
+<body>
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <a href="/" class="text-cyan hover:underline mb-8 inline-block font-mono">← Back to Portfolio</a>
+        
+        <div class="mb-6">
+            <span class="text-cyan text-sm font-mono bg-gray-800 px-3 py-1 rounded mr-2">Sep 2024</span>
+            <span class="text-purple-400 text-sm font-mono bg-gray-800 px-3 py-1 rounded">Theory</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-8">Applications of Finite Automata in Text Search and Pattern Matching</h1>
+        
+        <div class="article-content">
+            <h2>Introduction</h2>
+            <p>In computer science, Discrete Structures and Graph Theory provide the foundation for various computational models. One of the most important models is the Finite Automaton (FA). A finite automaton is a mathematical model of computation used to represent and manipulate a set of input symbols. It plays a central role in pattern recognition, lexical analysis, string searching, and text processing.</p>
+            <p>The importance of finite automata lies in their ability to provide a systematic and efficient way of solving searching and pattern-matching problems. In this article, we explore the concept of finite automata, their applications in text search and pattern matching, and their relevance in modern computer science.</p>
+
+            <h2>Concept of Finite Automata</h2>
+            <p>A Finite Automaton (FA) is a simple machine with:</p>
+            <ol>
+                <li><strong>States</strong> (a finite set)</li>
+                <li><strong>Input Alphabet</strong> (symbols it can read)</li>
+                <li><strong>Transition Function</strong> (rules for moving between states)</li>
+                <li><strong>Start State</strong> (initial state)</li>
+                <li><strong>Accept States</strong> (final valid states)</li>
+            </ol>
+            <p>There are two main types of finite automata:</p>
+            <ul>
+                <li><strong>Deterministic Finite Automaton (DFA)</strong>: For each state and input symbol, there is exactly one transition to another state</li>
+                <li><strong>Non-deterministic Finite Automaton (NFA)</strong>: For a given state and input, there can be multiple possible transitions</li>
+            </ul>
+
+            <h2>Applications in Text Search</h2>
+            <p>Finite automata are extensively used in text editors, search engines, and compilers for pattern matching. When you search for a keyword in a document, the underlying algorithm often uses a finite automaton to efficiently locate all occurrences of the pattern.</p>
+            <p><strong>String Matching:</strong> Finite automata provide an efficient way to scan through a text and identify specific patterns. The automaton is designed based on the pattern being searched, and it processes the text character by character.</p>
+            <p><strong>Regular Expressions:</strong> Regular expressions, used in programming and text processing, are closely related to finite automata. Every regular expression can be converted into a finite automaton that recognizes the same language.</p>
+
+            <h2>Pattern Matching Algorithms</h2>
+            <p>The <strong>Knuth-Morris-Pratt (KMP) algorithm</strong> and the <strong>Aho-Corasick algorithm</strong> are classic examples that utilize finite automata. These algorithms preprocess the pattern to build a finite automaton, which then scans the text in linear time.</p>
+            <p><strong>KMP Algorithm:</strong> It avoids unnecessary comparisons by using information from previous comparisons. The algorithm constructs a partial match table (failure function) that helps skip characters when a mismatch occurs.</p>
+            <p><strong>Aho-Corasick Algorithm:</strong> This algorithm is used for multiple pattern matching. It builds a finite automaton that can search for multiple patterns simultaneously in a single pass through the text.</p>
+
+            <h2>Applications in Lexical Analysis</h2>
+            <p>In compiler design, finite automata are used in the lexical analysis phase to recognize tokens. A lexical analyzer (or lexer) reads the source code and breaks it down into meaningful symbols like keywords, identifiers, operators, and literals.</p>
+            <p>Each token type can be represented by a finite automaton, and the lexer uses these automata to identify and classify tokens efficiently.</p>
+
+            <h2>Conclusion</h2>
+            <p>Finite automata remain fundamental in computer science, especially in pattern recognition, lexical analysis, and text processing. Their efficiency and mathematical elegance make them invaluable tools for solving real-world computational problems. Whether in compilers, text editors, or search engines, finite automata continue to play a crucial role in making software systems faster and more reliable.</p>
+        </div>
+        
+        <div class="mt-12 pt-6 border-t border-gray-700">
+            <p class="text-gray-400 text-sm">Written by <span class="text-cyan font-semibold">Harshal Sahani</span></p>
+            <div class="flex gap-4 mt-4">
+                <a href="https://github.com/LordHarshal" target="_blank" class="text-cyan hover:underline text-sm">GitHub</a>
+                <a href="https://www.linkedin.com/in/harshal-sahani-9aa555203/" target="_blank" class="text-cyan hover:underline text-sm">LinkedIn</a>
+                <a href="mailto:harshal.18167@sakec.ac.in" class="text-cyan hover:underline text-sm">Email</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

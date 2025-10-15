@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Trust Architecture - Harshal Sahani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0A192F; color: #E6F1FF; }
+        .article-content h2 { color: #64FFDA; font-size: 1.75rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+        .article-content p { color: #8892B0; line-height: 1.8; margin-bottom: 1rem; }
+        .article-content ul, .article-content ol { color: #8892B0; margin-left: 2rem; margin-bottom: 1rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+        .article-content strong { color: #64FFDA; }
+    </style>
+</head>
+<body>
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <a href="/" class="text-cyan hover:underline mb-8 inline-block font-mono">← Back to Portfolio</a>
+        
+        <div class="mb-6">
+            <span class="text-cyan text-sm font-mono bg-gray-800 px-3 py-1 rounded mr-2">Jul 2024</span>
+            <span class="text-purple-400 text-sm font-mono bg-gray-800 px-3 py-1 rounded">Security Architecture</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-8">Zero Trust Architecture: The Future of Network Security</h1>
+        
+        <div class="article-content">
+            <h2>Introduction</h2>
+            <p>Zero Trust is a security model based on the principle of "never trust, always verify." Unlike traditional security models that assume everything inside a corporate network is trustworthy, Zero Trust assumes that threats can exist both inside and outside the network perimeter. This paradigm shift recognizes that modern cybersecurity threats—including insider attacks, compromised credentials, and sophisticated external threats—require a more rigorous approach to access control and authentication.</p>
+            <p>As organizations increasingly adopt cloud services, remote work, and bring-your-own-device (BYOD) policies, the traditional network perimeter has dissolved. Zero Trust Architecture (ZTA) provides a framework for securing resources in this new, perimeter-less environment.</p>
+
+            <h2>Core Principles of Zero Trust</h2>
+            <p><strong>1. Verify Explicitly:</strong> Always authenticate and authorize based on all available data points, including user identity, location, device health, service or workload, data classification, and anomalies. Don't assume trust based on network location alone.</p>
+            <p>This means implementing multi-factor authentication (MFA), continuous verification, and context-aware access controls that consider the full picture of each access request.</p>
+
+            <p><strong>2. Use Least Privilege Access:</strong> Limit user access with Just-In-Time (JIT) and Just-Enough-Access (JEA) principles. Users should only have access to the specific resources they need to perform their job functions, and only for the duration they need them.</p>
+            <p>This minimizes the potential damage from compromised accounts and reduces the attack surface. Implement role-based access control (RBAC) and regularly review and adjust permissions.</p>
+
+            <p><strong>3. Assume Breach:</strong> Minimize the blast radius and segment access to prevent lateral movement. Design security architecture under the assumption that attackers may already be inside the network.</p>
+            <p>This principle drives the implementation of micro-segmentation, encryption of data in transit and at rest, and continuous monitoring for suspicious activities.</p>
+
+            <h2>Key Components of Zero Trust Architecture</h2>
+            <p><strong>Identity and Access Management (IAM):</strong> Centralized authentication and authorization system that verifies user identities before granting access. IAM solutions should support:</p>
+            <ul>
+                <li>Multi-factor authentication (MFA)</li>
+                <li>Single sign-on (SSO)</li>
+                <li>Adaptive authentication based on risk</li>
+                <li>Identity governance and lifecycle management</li>
+                <li>Privileged access management (PAM)</li>
+            </ul>
+
+            <p><strong>Micro-Segmentation:</strong> Dividing the network into small, isolated zones to maintain separate access for different parts of the network. Benefits include:</p>
+            <ul>
+                <li>Limiting lateral movement of attackers</li>
+                <li>Containing breaches to smaller areas</li>
+                <li>Applying granular security policies</li>
+                <li>Improving compliance with data protection regulations</li>
+            </ul>
+
+            <p><strong>Multi-Factor Authentication (MFA):</strong> Requiring multiple forms of verification before granting access. MFA typically combines:</p>
+            <ul>
+                <li>Something you know (password, PIN)</li>
+                <li>Something you have (security token, smartphone)</li>
+                <li>Something you are (biometrics: fingerprint, facial recognition)</li>
+            </ul>
+
+            <p><strong>Continuous Monitoring and Analytics:</strong> Real-time monitoring of all network activities, user behaviors, and access patterns to detect anomalies and potential threats. This includes:</p>
+            <ul>
+                <li>Security Information and Event Management (SIEM)</li>
+                <li>User and Entity Behavior Analytics (UEBA)</li>
+                <li>Endpoint Detection and Response (EDR)</li>
+                <li>Network Traffic Analysis (NTA)</li>
+            </ul>
+
+            <p><strong>Encryption:</strong> Protecting data both in transit and at rest using strong encryption protocols. Zero Trust mandates that all communications be encrypted, regardless of whether they occur within the network or across the internet.</p>
+
+            <p><strong>Device Security and Management:</strong> Ensuring that all devices accessing the network meet security standards:</p>
+            <ul>
+                <li>Device compliance checking</li>
+                <li>Regular patching and updates</li>
+                <li>Endpoint protection platforms (EPP)</li>
+                <li>Mobile device management (MDM)</li>
+            </ul>
+
+            <h2>Implementation Strategy</h2>
+            <p><strong>Phase 1: Identify and Classify Assets</strong></p>
+            <ol>
+                <li>Identify all sensitive data, assets, applications, and services (the "protect surface")</li>
+                <li>Classify data based on sensitivity and regulatory requirements</li>
+                <li>Map data flows and dependencies between systems</li>
+                <li>Understand who needs access to what resources and why</li>
+            </ol>
+
+            <p><strong>Phase 2: Map Transaction Flows</strong></p>
+            <ol>
+                <li>Document how data moves across your network</li>
+                <li>Identify all access points and potential vulnerabilities</li>
+                <li>Understand normal patterns to detect anomalies</li>
+                <li>Create detailed network architecture diagrams</li>
+            </ol>
+
+            <p><strong>Phase 3: Architect Zero Trust Network</strong></p>
+            <ol>
+                <li>Design micro-perimeters around sensitive resources</li>
+                <li>Implement next-generation firewalls and secure access gateways</li>
+                <li>Deploy identity and access management solutions</li>
+                <li>Create detailed policies for each micro-perimeter</li>
+            </ol>
+
+            <p><strong>Phase 4: Create Zero Trust Policy</strong></p>
+            <ol>
+                <li>Develop the Kipling Method policy: who, what, when, where, why, and how</li>
+                <li>Implement least privilege access controls</li>
+                <li>Define acceptable use policies</li>
+                <li>Establish incident response procedures</li>
+            </ol>
+
+            <p><strong>Phase 5: Monitor and Maintain</strong></p>
+            <ol>
+                <li>Continuously monitor all network activities</li>
+                <li>Use analytics to improve security posture</li>
+                <li>Regularly review and update policies</li>
+                <li>Conduct periodic security assessments and penetration tests</li>
+            </ol>
+
+            <h2>Technologies Enabling Zero Trust</h2>
+            <ul>
+                <li><strong>Software-Defined Perimeter (SDP):</strong> Creates individual micro-segments for each connection</li>
+                <li><strong>Secure Access Service Edge (SASE):</strong> Combines network security functions with WAN capabilities</li>
+                <li><strong>Cloud Access Security Broker (CASB):</strong> Enforces security policies for cloud applications</li>
+                <li><strong>Identity Provider (IdP):</strong> Centralized authentication services</li>
+                <li><strong>Privileged Access Management (PAM):</strong> Controls and monitors privileged user access</li>
+                <li><strong>Data Loss Prevention (DLP):</strong> Prevents unauthorized data exfiltration</li>
+            </ul>
+
+            <h2>Benefits of Zero Trust</h2>
+            <ul>
+                <li><strong>Reduced Attack Surface:</strong> Limits exposed resources and potential entry points</li>
+                <li><strong>Improved Data Security:</strong> Protects sensitive information through encryption and access controls</li>
+                <li><strong>Better Compliance:</strong> Helps meet regulatory requirements like GDPR, HIPAA, PCI-DSS</li>
+                <li><strong>Enhanced Visibility:</strong> Provides comprehensive insight into network activities</li>
+                <li><strong>Simplified Network Management:</strong> Centralized policy management and enforcement</li>
+                <li><strong>Support for Remote Work:</strong> Securely enables work from anywhere</li>
+                <li><strong>Containment of Breaches:</strong> Limits damage if security is compromised</li>
+            </ul>
+
+            <h2>Challenges in Implementing Zero Trust</h2>
+            <ul>
+                <li><strong>Complexity:</strong> Requires significant planning, architecture redesign, and technology integration</li>
+                <li><strong>Cost:</strong> Initial investment in new technologies and infrastructure can be substantial</li>
+                <li><strong>Legacy Systems:</strong> Older applications may not support modern authentication methods</li>
+                <li><strong>User Experience:</strong> Additional security measures can sometimes impact productivity</li>
+                <li><strong>Cultural Resistance:</strong> Requires organizational change and user buy-in</li>
+                <li><strong>Skill Gap:</strong> Need for specialized expertise in Zero Trust technologies</li>
+            </ul>
+
+            <h2>Best Practices</h2>
+            <ul>
+                <li>Start with high-value assets and gradually expand</li>
+                <li>Automate where possible to reduce manual overhead</li>
+                <li>Educate users about new security measures</li>
+                <li>Balance security with usability</li>
+                <li>Regularly test and update security policies</li>
+                <li>Maintain detailed logging and audit trails</li>
+                <li>Integrate threat intelligence feeds</li>
+                <li>Plan for incident response within Zero Trust framework</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>Zero Trust Architecture represents a fundamental shift in how organizations approach network security. By eliminating implicit trust and continuously verifying every access request, organizations can significantly improve their security posture in today's complex threat landscape. While implementation requires careful planning, investment, and organizational change, the benefits—including reduced risk, better compliance, and support for modern work environments—make Zero Trust an essential strategy for forward-thinking organizations.</p>
+            <p>As cyber threats continue to evolve and become more sophisticated, Zero Trust will transition from a cutting-edge approach to a standard security requirement. Organizations that begin their Zero Trust journey now will be better positioned to protect their assets, maintain compliance, and adapt to future security challenges. Remember, Zero Trust is not a product you can purchase but a journey of continuous improvement in security practices and architecture.</p>
+        </div>
+        
+        <div class="mt-12 pt-6 border-t border-gray-700">
+            <p class="text-gray-400 text-sm">Written by <span class="text-cyan font-semibold">Harshal Sahani</span></p>
+            <div class="flex gap-4 mt-4">
+                <a href="https://github.com/LordHarshal" target="_blank" class="text-cyan hover:underline text-sm">GitHub</a>
+                <a href="https://www.linkedin.com/in/harshal-sahani-9aa555203/" target="_blank" class="text-cyan hover:underline text-sm">LinkedIn</a>
+                <a href="mailto:harshal.18167@sakec.ac.in" class="text-cyan hover:underline text-sm">Email</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

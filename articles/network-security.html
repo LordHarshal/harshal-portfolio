@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Fundamentals - Harshal Sahani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0A192F; color: #E6F1FF; }
+        .article-content h2 { color: #64FFDA; font-size: 1.75rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+        .article-content p { color: #8892B0; line-height: 1.8; margin-bottom: 1rem; }
+        .article-content ul { color: #8892B0; margin-left: 2rem; margin-bottom: 1rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+        .article-content strong { color: #64FFDA; }
+    </style>
+</head>
+<body>
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <a href="/" class="text-cyan hover:underline mb-8 inline-block font-mono">← Back to Portfolio</a>
+        
+        <div class="mb-6">
+            <span class="text-cyan text-sm font-mono bg-gray-800 px-3 py-1 rounded mr-2">Oct 2024</span>
+            <span class="text-purple-400 text-sm font-mono bg-gray-800 px-3 py-1 rounded">Cybersecurity</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-8">Network Security Fundamentals: A Comprehensive Guide</h1>
+        
+        <div class="article-content">
+            <h2>Introduction</h2>
+            <p>Network security is the practice of protecting computer networks and data from unauthorized access, misuse, modification, or denial of service attacks. In today's interconnected world, where businesses rely heavily on digital infrastructure, network security has become a critical component of organizational cybersecurity strategy. This article explores the fundamental principles, technologies, and best practices that form the foundation of effective network security.</p>
+
+            <h2>Core Principles: The CIA Triad</h2>
+            <p>The CIA triad represents the three fundamental principles of information security:</p>
+            <p><strong>Confidentiality:</strong> Ensuring that data is accessible only to authorized users. This is achieved through encryption, access controls, and authentication mechanisms. For example, encrypting sensitive emails ensures that only the intended recipient can read the content.</p>
+            <p><strong>Integrity:</strong> Maintaining the accuracy and completeness of data. Integrity ensures that information is not altered or tampered with during transmission or storage. Hash functions and digital signatures are commonly used to verify data integrity.</p>
+            <p><strong>Availability:</strong> Ensuring that systems and data are accessible when needed. This involves implementing redundancy, backup systems, and disaster recovery plans to minimize downtime and ensure business continuity.</p>
+
+            <h2>Network Security Technologies</h2>
+            <p><strong>1. Firewalls:</strong> Firewalls act as a barrier between trusted internal networks and untrusted external networks. They filter incoming and outgoing traffic based on predefined security rules. Modern firewalls include stateful inspection, application-level filtering, and next-generation features like deep packet inspection.</p>
+            <p><strong>2. Intrusion Detection and Prevention Systems (IDS/IPS):</strong> IDS monitors network traffic for suspicious activities and alerts administrators, while IPS actively blocks detected threats. These systems use signature-based detection, anomaly detection, and behavioral analysis to identify potential attacks.</p>
+            <p><strong>3. Virtual Private Networks (VPNs):</strong> VPNs create secure, encrypted connections over public networks, allowing remote users to access corporate resources safely. They use tunneling protocols like IPsec, SSL/TLS, and WireGuard to protect data in transit.</p>
+            <p><strong>4. Encryption:</strong> Encryption transforms readable data into coded format, making it unreadable to unauthorized parties. Common encryption protocols include AES (Advanced Encryption Standard) for data at rest and TLS (Transport Layer Security) for data in transit.</p>
+            <p><strong>5. Network Access Control (NAC):</strong> NAC systems enforce security policies by controlling which devices can access the network. They verify device compliance, user identity, and security posture before granting access.</p>
+
+            <h2>Common Network Threats</h2>
+            <ul>
+                <li><strong>Malware:</strong> Viruses, worms, trojans, ransomware, and spyware that infect systems and steal or damage data</li>
+                <li><strong>Phishing Attacks:</strong> Fraudulent attempts to obtain sensitive information by disguising as trustworthy entities</li>
+                <li><strong>Distributed Denial of Service (DDoS):</strong> Overwhelming network resources to make services unavailable</li>
+                <li><strong>Man-in-the-Middle (MITM) Attacks:</strong> Intercepting communications between two parties to steal or manipulate data</li>
+                <li><strong>SQL Injection:</strong> Exploiting vulnerabilities in database queries to gain unauthorized access</li>
+                <li><strong>Zero-Day Exploits:</strong> Attacks targeting previously unknown vulnerabilities</li>
+            </ul>
+
+            <h2>Defense-in-Depth Strategy</h2>
+            <p>Defense-in-depth is a layered security approach that implements multiple security controls throughout an IT system. If one layer fails, others continue to provide protection. The layers typically include:</p>
+            <ul>
+                <li><strong>Perimeter Security:</strong> Firewalls, DMZ (Demilitarized Zone), and border routers</li>
+                <li><strong>Network Security:</strong> IDS/IPS, network segmentation, and VLANs</li>
+                <li><strong>Endpoint Security:</strong> Antivirus software, endpoint detection and response (EDR), and host-based firewalls</li>
+                <li><strong>Application Security:</strong> Secure coding practices, web application firewalls (WAF), and regular security testing</li>
+                <li><strong>Data Security:</strong> Encryption, data loss prevention (DLP), and access controls</li>
+                <li><strong>User Education:</strong> Security awareness training and phishing simulations</li>
+            </ul>
+
+            <h2>Best Practices for Network Security</h2>
+            <ul>
+                <li>Implement strong password policies and multi-factor authentication (MFA)</li>
+                <li>Regularly update and patch systems and software</li>
+                <li>Conduct regular security audits and vulnerability assessments</li>
+                <li>Monitor network traffic for anomalies and suspicious activities</li>
+                <li>Implement principle of least privilege (POLP) for user access</li>
+                <li>Maintain comprehensive backup and disaster recovery plans</li>
+                <li>Segment networks to limit lateral movement of attackers</li>
+                <li>Encrypt sensitive data both at rest and in transit</li>
+                <li>Establish an incident response plan and conduct regular drills</li>
+                <li>Stay informed about emerging threats and security trends</li>
+            </ul>
+
+            <h2>Wireless Network Security</h2>
+            <p>Wireless networks introduce additional security challenges due to their broadcast nature. Key security measures include:</p>
+            <ul>
+                <li>Using WPA3 or at minimum WPA2 encryption</li>
+                <li>Hiding SSID broadcast (though not foolproof)</li>
+                <li>Implementing MAC address filtering</li>
+                <li>Using strong, unique passphrases</li>
+                <li>Regularly updating router firmware</li>
+                <li>Creating separate guest networks</li>
+                <li>Disabling WPS (Wi-Fi Protected Setup)</li>
+            </ul>
+
+            <h2>Emerging Trends in Network Security</h2>
+            <p><strong>Zero Trust Architecture:</strong> Moving away from traditional perimeter-based security to a model that assumes no implicit trust, requiring verification for every access request.</p>
+            <p><strong>Artificial Intelligence and Machine Learning:</strong> Using AI/ML for advanced threat detection, automated response, and predictive security analytics.</p>
+            <p><strong>Software-Defined Networking (SDN):</strong> Providing centralized control and programmability for more flexible and responsive security policies.</p>
+            <p><strong>Cloud Security:</strong> Adapting security strategies for cloud environments with tools like CASB (Cloud Access Security Brokers) and CSPM (Cloud Security Posture Management).</p>
+
+            <h2>Conclusion</h2>
+            <p>Network security is a continuously evolving field that requires constant vigilance, adaptation, and education. By understanding fundamental principles, implementing appropriate technologies, and following best practices, organizations can significantly reduce their risk of cyberattacks. As threats become more sophisticated, a comprehensive, multi-layered approach to network security is essential for protecting valuable digital assets and maintaining business operations. Remember, security is not a one-time implementation but an ongoing process of assessment, improvement, and adaptation to emerging threats.</p>
+        </div>
+        
+        <div class="mt-12 pt-6 border-t border-gray-700">
+            <p class="text-gray-400 text-sm">Written by <span class="text-cyan font-semibold">Harshal Sahani</span></p>
+            <div class="flex gap-4 mt-4">
+                <a href="https://github.com/LordHarshal" target="_blank" class="text-cyan hover:underline text-sm">GitHub</a>
+                <a href="https://www.linkedin.com/in/harshal-sahani-9aa555203/" target="_blank" class="text-cyan hover:underline text-sm">LinkedIn</a>
+                <a href="mailto:harshal.18167@sakec.ac.in" class="text-cyan hover:underline text-sm">Email</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

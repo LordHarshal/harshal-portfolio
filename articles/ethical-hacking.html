@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Hacking Methodologies - Harshal Sahani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0A192F; color: #E6F1FF; }
+        .article-content h2 { color: #64FFDA; font-size: 1.75rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+        .article-content p { color: #8892B0; line-height: 1.8; margin-bottom: 1rem; }
+        .article-content ul, .article-content ol { color: #8892B0; margin-left: 2rem; margin-bottom: 1rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+        .article-content strong { color: #64FFDA; }
+    </style>
+</head>
+<body>
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <a href="/" class="text-cyan hover:underline mb-8 inline-block font-mono">← Back to Portfolio</a>
+        
+        <div class="mb-6">
+            <span class="text-cyan text-sm font-mono bg-gray-800 px-3 py-1 rounded mr-2">Sep 2024</span>
+            <span class="text-purple-400 text-sm font-mono bg-gray-800 px-3 py-1 rounded">Ethical Hacking</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-8">Ethical Hacking Methodologies and Penetration Testing</h1>
+        
+        <div class="article-content">
+            <h2>Introduction</h2>
+            <p>Ethical hacking is the practice of testing computer systems, networks, and applications to find security vulnerabilities that malicious hackers could exploit. Unlike malicious hackers (black hat hackers), ethical hackers (white hat hackers) work with permission from system owners to improve security. This article explores the methodologies, tools, and best practices that professional ethical hackers use to protect organizations from cyber threats.</p>
+
+            <h2>What is Penetration Testing?</h2>
+            <p>Penetration testing, or pen testing, is a simulated cyberattack against a system to check for exploitable vulnerabilities. It goes beyond automated scanning by employing manual techniques and creative thinking to discover security weaknesses. The goal is to identify vulnerabilities before malicious actors can exploit them, allowing organizations to fix issues proactively.</p>
+
+            <h2>Types of Penetration Testing</h2>
+            <p><strong>Black Box Testing:</strong> The tester has no prior knowledge of the system. This simulates an external attack where the hacker has no inside information.</p>
+            <p><strong>White Box Testing:</strong> The tester has complete knowledge of the system, including source code, architecture, and credentials. This allows for comprehensive security analysis.</p>
+            <p><strong>Grey Box Testing:</strong> The tester has partial knowledge, such as user-level credentials. This simulates an insider threat or a compromised user account.</p>
+
+            <h2>Penetration Testing Phases</h2>
+            <p><strong>1. Reconnaissance (Information Gathering):</strong> The first phase involves collecting as much information as possible about the target. This includes:</p>
+            <ul>
+                <li>Passive reconnaissance: Gathering publicly available information without directly interacting with the target (OSINT - Open Source Intelligence)</li>
+                <li>Active reconnaissance: Directly interacting with the target to gather information (port scanning, network mapping)</li>
+                <li>Tools used: Google Dorking, Shodan, Maltego, theHarvester, Whois lookup</li>
+            </ul>
+
+            <p><strong>2. Scanning and Enumeration:</strong> This phase identifies open ports, services, operating systems, and potential vulnerabilities:</p>
+            <ul>
+                <li>Port scanning: Identifying which ports are open and what services are running</li>
+                <li>Vulnerability scanning: Using automated tools to detect known vulnerabilities</li>
+                <li>Service enumeration: Gathering detailed information about running services</li>
+                <li>Tools used: Nmap, Nessus, OpenVAS, Nikto, Metasploit</li>
+            </ul>
+
+            <p><strong>3. Gaining Access (Exploitation):</strong> Using discovered vulnerabilities to gain unauthorized access:</p>
+            <ul>
+                <li>Exploiting software vulnerabilities (buffer overflows, SQL injection, XSS)</li>
+                <li>Password attacks (brute force, dictionary attacks, credential stuffing)</li>
+                <li>Social engineering techniques</li>
+                <li>Privilege escalation to gain higher-level access</li>
+                <li>Tools used: Metasploit Framework, SQLmap, Burp Suite, Hydra, John the Ripper</li>
+            </ul>
+
+            <p><strong>4. Maintaining Access:</strong> Installing backdoors or creating persistent access mechanisms:</p>
+            <ul>
+                <li>Creating hidden user accounts</li>
+                <li>Installing rootkits or trojans</li>
+                <li>Establishing command and control (C2) channels</li>
+                <li>This phase demonstrates the potential long-term impact of a breach</li>
+            </ul>
+
+            <p><strong>5. Covering Tracks:</strong> Erasing evidence of the intrusion:</p>
+            <ul>
+                <li>Clearing log files</li>
+                <li>Hiding files and processes</li>
+                <li>Removing artifacts that could reveal the attack</li>
+                <li>This demonstrates how attackers avoid detection</li>
+            </ul>
+
+            <p><strong>6. Reporting:</strong> Documenting all findings and providing recommendations:</p>
+            <ul>
+                <li>Executive summary for management</li>
+                <li>Detailed technical findings</li>
+                <li>Risk assessment and prioritization</li>
+                <li>Remediation recommendations</li>
+                <li>Proof of concept demonstrations</li>
+            </ul>
+
+            <h2>Essential Ethical Hacking Tools</h2>
+            <p><strong>Network Scanning and Reconnaissance:</strong></p>
+            <ul>
+                <li><strong>Nmap:</strong> Network scanner for port discovery and service detection</li>
+                <li><strong>Wireshark:</strong> Network protocol analyzer for traffic inspection</li>
+                <li><strong>Netcat:</strong> Network utility for reading and writing data across network connections</li>
+            </ul>
+
+            <p><strong>Vulnerability Assessment:</strong></p>
+            <ul>
+                <li><strong>Nessus:</strong> Comprehensive vulnerability scanner</li>
+                <li><strong>OpenVAS:</strong> Open-source vulnerability assessment tool</li>
+                <li><strong>Nikto:</strong> Web server scanner</li>
+            </ul>
+
+            <p><strong>Exploitation Frameworks:</strong></p>
+            <ul>
+                <li><strong>Metasploit:</strong> Complete penetration testing framework with extensive exploit database</li>
+                <li><strong>Cobalt Strike:</strong> Advanced threat emulation software</li>
+                <li><strong>BeEF:</strong> Browser Exploitation Framework</li>
+            </ul>
+
+            <p><strong>Web Application Testing:</strong></p>
+            <ul>
+                <li><strong>Burp Suite:</strong> Integrated platform for web application security testing</li>
+                <li><strong>OWASP ZAP:</strong> Web application security scanner</li>
+                <li><strong>SQLmap:</strong> Automated SQL injection and database takeover tool</li>
+            </ul>
+
+            <p><strong>Password Cracking:</strong></p>
+            <ul>
+                <li><strong>John the Ripper:</strong> Password cracker supporting multiple encryption formats</li>
+                <li><strong>Hashcat:</strong> Advanced password recovery tool</li>
+                <li><strong>Hydra:</strong> Network login cracker supporting numerous protocols</li>
+            </ul>
+
+            <p><strong>Wireless Network Testing:</strong></p>
+            <ul>
+                <li><strong>Aircrack-ng:</strong> Suite of tools for WiFi security assessment</li>
+                <li><strong>Kismet:</strong> Wireless network detector and sniffer</li>
+                <li><strong>Reaver:</strong> WPS attack tool</li>
+            </ul>
+
+            <h2>Common Attack Vectors</h2>
+            <ul>
+                <li><strong>SQL Injection:</strong> Exploiting database query vulnerabilities</li>
+                <li><strong>Cross-Site Scripting (XSS):</strong> Injecting malicious scripts into web pages</li>
+                <li><strong>Cross-Site Request Forgery (CSRF):</strong> Forcing users to execute unwanted actions</li>
+                <li><strong>Buffer Overflow:</strong> Overwriting memory to execute arbitrary code</li>
+                <li><strong>Man-in-the-Middle (MITM):</strong> Intercepting communications between parties</li>
+                <li><strong>Session Hijacking:</strong> Stealing session tokens to impersonate users</li>
+                <li><strong>Denial of Service (DoS):</strong> Overwhelming systems to make them unavailable</li>
+            </ul>
+
+            <h2>Ethical Considerations and Legal Framework</h2>
+            <p><strong>Always Obtain Proper Authorization:</strong> Never test systems without explicit written permission. Unauthorized hacking is illegal and can result in severe penalties.</p>
+            <p><strong>Respect Privacy and Confidentiality:</strong> Handle all discovered information responsibly and maintain client confidentiality.</p>
+            <p><strong>Stay Within Scope:</strong> Only test systems and networks explicitly defined in the engagement agreement.</p>
+            <p><strong>Report All Findings Responsibly:</strong> Provide detailed reports and assist in remediation efforts.</p>
+            <p><strong>Follow Legal Requirements:</strong> Comply with relevant laws such as Computer Fraud and Abuse Act (CFAA), GDPR, and local regulations.</p>
+            <p><strong>Certifications:</strong> Professional certifications like CEH (Certified Ethical Hacker), OSCP (Offensive Security Certified Professional), and GPEN demonstrate ethical hacking competence.</p>
+
+            <h2>Bug Bounty Programs</h2>
+            <p>Many organizations run bug bounty programs where ethical hackers can responsibly disclose vulnerabilities in exchange for rewards. Popular platforms include HackerOne, Bugcrowd, and Synack. These programs provide legal, authorized opportunities to practice ethical hacking skills.</p>
+
+            <h2>Conclusion</h2>
+            <p>Ethical hacking is a crucial discipline in modern cybersecurity. By thinking like attackers but acting with integrity, ethical hackers help organizations identify and fix security weaknesses before they can be exploited maliciously. The field requires continuous learning, as new vulnerabilities and attack techniques emerge constantly. Whether pursuing a career in cybersecurity or simply interested in understanding how systems are secured, ethical hacking provides valuable insights into the ongoing battle between security professionals and malicious actors. Remember: with great power comes great responsibility – always use your skills ethically and legally.</p>
+        </div>
+        
+        <div class="mt-12 pt-6 border-t border-gray-700">
+            <p class="text-gray-400 text-sm">Written by <span class="text-cyan font-semibold">Harshal Sahani</span></p>
+            <div class="flex gap-4 mt-4">
+                <a href="https://github.com/LordHarshal" target="_blank" class="text-cyan hover:underline text-sm">GitHub</a>
+                <a href="https://www.linkedin.com/in/harshal-sahani-9aa555203/" target="_blank" class="text-cyan hover:underline text-sm">LinkedIn</a>
+                <a href="mailto:harshal.18167@sakec.ac.in" class="text-cyan hover:underline text-sm">Email</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
